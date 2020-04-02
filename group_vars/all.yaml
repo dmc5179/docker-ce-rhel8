@@ -1,0 +1,8 @@
+---
+
+docker_ce_version: 19.03
+docker_compose_version: 1.25.4
+
+
+
+...
