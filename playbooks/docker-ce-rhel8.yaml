@@ -4,9 +4,11 @@
 
   tasks:
 
+  # TODO: Need to find ansible module that covers adding a repo
   - name: Enable the Docker CE Repository
     shell: dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
 
+  # TODO: Should be changed to lineinfile module instead of using sed
   - name: Enable the Docker CE Repository
     shell: sed -i '/^gpgkey=https:\/\/download.docker.com\/linux\/centos\/gpg/a module_hotfixes=True' /etc/yum.repos.d/docker-ce.repo
 
